@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="https://image.flaticon.com/icons/svg/1027/1027029.svg">
+        <title>gFuncionário</title>
+    </head>
+    <body>
+        <section id="container">
+            <header id="cabecalho">
+                <div>
+                     <ul>
+                         <li>
+                             <a href="index.html">Home</a>    
+                         </li>
+                         <li>
+                             <a href="#">Companhia</a>
+                         </li>
+                         <li>
+                             <a href="">Funcionários</a>
+                         </li>
+                     </ul>
+                </div>
+            </header>
+            <br>
+            <div>
+                <h2>Cadastro Funcionários</h2><br>
+                <form id="work_us">
+                    <fieldset>
+                        <legend>Informações Pessoais</legend>
+                        <label for="nomeFun">Nome Funcionário: </label>
+                        <input type="text" id="nomeFun" placeholder="NOME COMPLETO">
+
+                        <label for="dataNasc">Data de Nascimento:</label>
+                        <input type="text" id="dataNasc" placeholder="xx / xx / xxxx" maxlength="8"> 
+
+                        <label for="estado_civil">Estado Cívil:</label>
+                        <select name="estado_civil" id="estado_civil">
+                            <optgroup label="Estado Cívil">
+                                <option value="" selected></option>
+                                <option value="">Solteiro(a)</option>
+                                <option value="">Casado(a)</option>
+                                <option value="">Divorciado(a)</option>
+                                <option value="">Viuvo(a)</option>
+                            </optgroup>
+                        </select> <br>
+
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" placeholder="xxx.xxx.xxx-xx"  maxlength="11">
+
+                        <label for="rg">RG:</label>
+                        <input type="text" id="rg" placeholder="xx.xxx.xxx-x" maxlength="9">
+
+                        <label for="cnh-tipo">CNH(A ou B):</label>
+                        <input type="text" id="cnh-tipo">
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Endereço</legend>
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" placeholder="xx.xxx-xxx"> <br>
+
+                        <label for="rua">Rua:</label>
+                        <input type="text" name="" id="rua">
+
+                        <label for="numero">Número:</label>
+                        <input type="text" name="" id="numero"> <br>
+                        
+                        <label for="complement">Complemento:</label>
+                        <input type="text" id="complement" placeholder="OPCIONAL">
+
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" name="" id="bairro">
+
+                        <label for="city">Cidade:</label>
+                        <input type="text" name="" id="city">
+
+                        <label for="estado">Estado :</label>
+                        <select name="estado" id="estado">
+                        <optgroup label="Estado">
+                            <option value="Vazio" selected></option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Manharão</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="DF">Distrito Federal</option>
+                        </optgroup>
+                        </select>
+
+                    </fieldset>
+                    
+                   <div>
+                        <input type="submit" id="submit" value="Salvar">
+
+                    </div>
+                </form>
+            </div>
+            
+       
+        </section> 
+    </body>
+</html>
