@@ -77,10 +77,20 @@ fieldset{
     padding: 1em ;
     text-transform: uppercase;
     position: relative;
+
     
+}
+fieldset input:valid{
+    border: 1px solid green;
+    outline: none;
+}
+fieldset input:invalid{
+    border: 1px solid red;
+    outline: none;
 }
 label{
     display: inline;
+    
 }
 input{
     margin: 10px;
@@ -101,3 +111,4 @@ input{
     border: 2px solid rgb(27, 27, 27); ;
     cursor: pointer;
 }
+
