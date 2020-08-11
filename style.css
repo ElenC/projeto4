@@ -87,10 +87,17 @@ input{
 }
 
 #submit{
-    padding: 15px 30px;
+    margin-right: 20px;
     float: right;
-    background: rgb(27, 27, 27);
-    color: #fff;
+    background-color: rgb(27, 27, 27); 
     border: 2px solid #000;
+    border-radius: 10px;
+}
+
+#submit input{
+    padding: 12px 30px;
+    background-color: rgb(27, 27, 27); 
+    color: #fff;
+    border: 2px solid rgb(27, 27, 27); ;
     cursor: pointer;
 }

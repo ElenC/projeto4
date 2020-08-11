@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/png" href="https://image.flaticon.com/icons/svg/1027/1027029.svg">
-        <title>gFuncionário</title>
+        <title>Funcionário</title>
     </head>
     <body>
         <section id="container">
@@ -34,10 +34,10 @@
                         <input type="text" id="nomeFun" placeholder="NOME COMPLETO">
 
                         <label for="dataNasc">Data de Nascimento:</label>
-                        <input type="text" id="dataNasc" placeholder="xx / xx / xxxx" maxlength="8"> 
+                        <input type="text" id="dataNasc" placeholder="xx / xx / xxxx" minlength="9" maxlength="10"> 
 
-                        <label for="estado_civil">Estado Cívil:</label>
-                        <select name="estado_civil" id="estado_civil">
+                        <label for="est_civil">Estado Cívil:</label>
+                        <select name="est_civil" id="est_civil">
                             <optgroup label="Estado Cívil">
                                 <option value="" selected></option>
                                 <option value="">Solteiro(a)</option>
@@ -48,10 +48,10 @@
                         </select> <br>
 
                         <label for="cpf">CPF:</label>
-                        <input type="text" id="cpf" placeholder="xxx.xxx.xxx-xx"  maxlength="11">
+                        <input type="text" id="cpf" placeholder="xxx.xxx.xxx-xx" minlength="13" maxlength="14">
 
                         <label for="rg">RG:</label>
-                        <input type="text" id="rg" placeholder="xx.xxx.xxx-x" maxlength="9">
+                        <input type="text" id="rg" placeholder="xx.xxx.xxx-x" minlength="11" maxlength="12">
 
                         <label for="cnh-tipo">CNH(A ou B):</label>
                         <input type="text" id="cnh-tipo">
@@ -66,7 +66,7 @@
                         <input type="text" name="" id="rua">
 
                         <label for="numero">Número:</label>
-                        <input type="text" name="" id="numero"> <br>
+                        <input type="text" name="" id="numero"minlength="2" maxlength="7"> <br>
                         
                         <label for="complement">Complemento:</label>
                         <input type="text" id="complement" placeholder="OPCIONAL">
@@ -111,8 +111,9 @@
                     </fieldset>
                     
                    <div>
-                        <input type="submit" id="submit" value="Salvar">
-
+                     <button id="submit">
+                        <input type="submit"  value="Salvar" onclick="CadSave">
+                    </button>
                     </div>
                 </form>
             </div>
