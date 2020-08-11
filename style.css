@@ -76,24 +76,18 @@ fieldset{
     margin: 0.8em 0;
     padding: 1em ;
     text-transform: uppercase;
-    position: relative;
+    position: relative;   
+}
 
-    
-}
-fieldset input:valid{
-    border: 1px solid green;
-    outline: none;
-}
-fieldset input:invalid{
-    border: 1px solid red;
-    outline: none;
-}
 label{
     display: inline;
     
 }
-input{
+
+
+.inp{
     margin: 10px;
+    outline: none;
 }
 
 #submit{
@@ -102,6 +96,7 @@ input{
     background-color: rgb(27, 27, 27); 
     border: 2px solid #000;
     border-radius: 10px;
+
 }
 
 #submit input{
