@@ -73,3 +73,25 @@ function validForm(element) {
         return false
     }
 }
+
+function getComplCep(cep){
+
+    let x = new XMLHttpRequest
+
+    x.open('GET', 'https://viacep.com.br/ws/' + cep + '/json/unicode', true)
+
+    x.onreadystatechange = function(){
+        if(x.readyState == 4 && x.status ==200){
+            let dadosJSONText = x.responseText
+            let dadosJSONObj = JSON.parse(dadosJSONText)
+
+            document.getElementById('rua').value = dadosJSONObj.logradouro
+            document.getElementById('bairro').value = dadosJSONObj.bairro
+            document.getElementById('city').value = dadosJSONObj.localidade
+            document.getElementById('estado').value = dadosJSONObj.uf
+            
+        }
+    }
+
+    x.send()
+}
