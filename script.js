@@ -74,6 +74,7 @@ function validForm(element) {
     }
 }
 
+
 function getComplCep(cep){
 
     let x = new XMLHttpRequest
@@ -96,24 +97,60 @@ function getComplCep(cep){
     x.send()
 }
 
-function saveC(e){
+function saveC(){
 
-    let nome = document.getElementById('nomeFun')
-    let nascimento = document.getElementById('dataNasc')
-    let estCivil = document.getElementById('est_civil')
-    let cpf = document.getElementById('cpf')
-    let rg = document.getElementById('rg')
-    let cnh = document.getElementById('cnh-tipo')
-    let cep = document.getElementById('cep')
-    let rua = document.getElementById('rua')
-    let num = document.getElementById('numero')
-    let compl = document.getElementById('complement')
-    let bairro = document.getElementById('bairro')
-    let city = document.getElementById('city')
-    let uf = document.getElementById('estado')
+    
+    const nome = document.getElementById('nomeFun')
+    const nascimento = document.getElementById('dataNasc')
+    const estCivil = document.getElementById('est_civil')
+    const cpf = document.getElementById('cpf')
+    const rg = document.getElementById('rg')
+    const cnh = document.getElementById('cnh-tipo')
+    const cep = document.getElementById('cep')
+    const rua = document.getElementById('rua')
+    const num = document.getElementById('numero')
+    const compl = document.getElementById('complement')
+    const bairro = document.getElementById('bairro')
+    const city = document.getElementById('city')
+    const uf = document.getElementById('estado')
 
+  
+   const saveF = {
+       nome: nome.value,
+       CPF: cpf.value,
+       RG: rg.value,
+       data_nasc: nascimento.value,
+       tipo_cnh: cnh.value,
+       estado_civil: estCivil.value,
+       CEP: cep.value,
+       rua: rua.value,
+       bairro: bairro.value,
+       cidade: city.value,
+       estado: uf.value,
+       numero: num.value,
+       complemento: compl.value
+   };
    
 
-   
+   var form_json = JSON.stringify(saveF);
 
+   const req = new XMLHttpRequest();
+
+   req.open('POST', 'https://beginner-api.herokuapp.com/save', false);
+
+   req.setRequestHeader('Content-Type', 'application/json');
+  
+    req.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+
+            var saveJson = JSON.parse(req.responseText)
+            if(saveJson.Sucesso != undefined){
+                alert('Cadastrado Realizado')
+            }else{
+                alert('ERRO! Tente Novamente..')
+            }
+        
+        }
+    }
+    req.send(form_json);
 }

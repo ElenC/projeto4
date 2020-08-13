@@ -27,7 +27,7 @@
             <br>
             <div>
                 <h2>Cadastro Funcionários</h2><br>
-                <form id="work_us" name="work_us" onsubmit="return validForm()">
+                <form id="work_us" name="work_us">
                     <fieldset >
                         <legend>Informações Pessoais</legend>
                         <label for="nomeFun">Nome Funcionário: </label>
@@ -39,10 +39,10 @@
                         <label for="est_civil">Estado Cívil:</label>
                         <select class="inp" name="est_civil" id="est_civil" name="est_civil" required>
                                 <option value="" selected></option>
-                                <option value="">Solteiro(a)</option>
-                                <option value="">Casado(a)</option>
-                                <option value="">Divorciado(a)</option>
-                                <option value="">Viuvo(a)</option>
+                                <option value="sol">Solteiro(a)</option>
+                                <option value="cas">Casado(a)</option>
+                                <option value="div">Divorciado(a)</option>
+                                <option value="viu">Viuvo(a)</option>
                         </select> <br>
 
                         <label for="cpf">CPF:</label>
@@ -58,7 +58,7 @@
                     <fieldset>
                         <legend>Endereço</legend>
                         <label  for="cep">CEP:</label>
-                        <input  class="inp" type="text" id="cep" name="cep" placeholder="xx.xxx-xxx" oninput="getComplCep(this.value)"> <br>
+                        <input  class="inp" type="text" id="cep" name="cep" placeholder="xx.xxx-xxx" onchange="getComplCep(this.value)"> <br>
 
                         <label for="rua">Rua:</label>
                         <input  class="inp" type="text" name="" id="rua" name="rua">
@@ -108,7 +108,7 @@
                     
                    <div>
                      <button id="submit">
-                        <input type="button"   value="Salvar" onclick="saveC(this)">
+                        <input type="button"   value="Salvar" onclick="saveC(); validForm(this.value) ">
                     </button>
                     </div>
                 </form>
