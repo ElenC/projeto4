@@ -95,3 +95,25 @@ function getComplCep(cep){
 
     x.send()
 }
+
+function saveC(e){
+
+    let nome = document.getElementById('nomeFun')
+    let nascimento = document.getElementById('dataNasc')
+    let estCivil = document.getElementById('est_civil')
+    let cpf = document.getElementById('cpf')
+    let rg = document.getElementById('rg')
+    let cnh = document.getElementById('cnh-tipo')
+    let cep = document.getElementById('cep')
+    let rua = document.getElementById('rua')
+    let num = document.getElementById('numero')
+    let compl = document.getElementById('complement')
+    let bairro = document.getElementById('bairro')
+    let city = document.getElementById('city')
+    let uf = document.getElementById('estado')
+
+   
+
+   
+
+}
